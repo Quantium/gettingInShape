@@ -11,17 +11,17 @@ def Main():
    # for char_index in range(len(string_to_iterate)):
    #    print(string_to_iterate[char_index])
       
-   string_to_iterate = "Python Data Science"
-   for char in string_to_iterate[0 : 6 : 1]:
-      print(char)
+   # string_to_iterate = "Python Data Science"
+   # for char in string_to_iterate[0 : 6 : 1]:
+   #    print(char)
       
    # string_to_iterate = "Python_Data_Science"
    # for char in string_to_iterate[ :  : 2]:
    #    print(char)
 
-   # string_to_iterate = "Machine Learning"
-   # for char in string_to_iterate[ :  : -1]:
-   #    print(char)
+   string_to_iterate = "Machine Learning"
+   for char in string_to_iterate[ :  : -1]:
+      print(char)
 
    # string_to_iterate = "Machine Learning"
    # char_index = len(string_to_iterate) - 1

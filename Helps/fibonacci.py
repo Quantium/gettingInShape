@@ -12,7 +12,7 @@ def fibonacci(n):
 
 # Call it from your console!!
 #$ python fibonacci.py 9
-
+t0= time.clock()
 fb = [fibonacci(i) for i in range(int(sys.argv[1]))]
 print(str(fb))
 t1 = time.clock() - t0

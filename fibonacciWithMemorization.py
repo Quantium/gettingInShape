@@ -5,6 +5,8 @@ import time
 class Solution:
     # A counter just for time meassuring
     count=0
+    # Dictionary to store previus computed subproblems
+    memory=dict()
     def fibonacci(self,n:int):
         # self.count is just for time meassuring, is not part of the algoritm as sell as n parameter
         self.count+=1
@@ -14,10 +16,16 @@ class Solution:
             return 0 
         if n == 1: 
             return 1 
-        return self.fibonacci(n - 1) + self.fibonacci(n - 2)
+        # Here we use memorization here, first we check if the computed n is not in the Dictionary already
+        if(memory[n]==null):
+            result=self.fibonacci(n - 1) + self.fibonacci(n - 2)
+            # Once we compute the result of the n subproblem we store it the dictionary
+            memory[n]=result
+            # And return the result
+            return result
 
 # Call it from your console!!
-#$ python fibonacci.py 9
+#$ python fibonacciWithMemorization.py 9
 t0= time.time()
 sol = Solution()
 fb = [sol.fibonacci(i) for i in range(int(sys.argv[1]))]

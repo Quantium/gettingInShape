@@ -2,10 +2,12 @@
 import sys
 import time
 class Solution:
+    # A counter just for time meassuring
     count=0
-    def fibonacci(self,n):
+    def fibonacci(self,n:int):
+        # self.count is just for time meassuring, is not part of the algoritm as sell as n parameter
         self.count+=1
-        if n < 0:
+        if n < 0: # This is for errors control in case that n is not a uint
             raise ValueError("invalid index!")
         if n == 0: 
             return 0 

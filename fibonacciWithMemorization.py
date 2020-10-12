@@ -17,15 +17,17 @@ class Solution:
         if n == 1: 
             return 1 
         # Here we use memorization here, first we check if the computed n is not in the Dictionary already
-        if(memory[n]==null):
+        if(self.memory.get(n) == None):
             result=self.fibonacci(n - 1) + self.fibonacci(n - 2)
             # Once we compute the result of the n subproblem we store it the dictionary
-            memory[n]=result
+            self.memory[n]=result
             # And return the result
             return result
+        else:
+            return self.memory.get(n)
 
 # Call it from your console!!
-#$ python fibonacciWithMemorization.py 9
+#$ python fibonacciWithMemorization.py 20
 t0= time.time()
 sol = Solution()
 fb = [sol.fibonacci(i) for i in range(int(sys.argv[1]))]
@@ -33,3 +35,16 @@ print(str(fb))
 t1 = time.time() - t0
 print("Time elapsed: ", t1)
 print("Iterations",sol.count)
+"""
+# Calling both algorithms and meassuring their time and iterations. 
+# Commonly the basic one will be the fastest whe u use les than 10 as parameter 
+# But check the Iterations count (Amazing!)
+
+❯ python fibonacciWithMemorization.py 30 && python Helps/fibonacci.py 30
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229]
+Time elapsed:  0.00013780593872070312
+Iterations 86
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229]
+Time elapsed:  1.5958778858184814
+Iterations 4356586
+"""

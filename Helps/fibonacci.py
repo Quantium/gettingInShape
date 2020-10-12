@@ -16,7 +16,7 @@ class Solution:
         return self.fibonacci(n - 1) + self.fibonacci(n - 2)
 
 # Call it from your console!!
-#$ python fibonacci.py 9
+#$ python fibonacci.py 20
 t0= time.time()
 sol = Solution()
 fb = [sol.fibonacci(i) for i in range(int(sys.argv[1]))]

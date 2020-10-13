@@ -6,7 +6,9 @@ class Solution:
     # A counter just for time meassuring
     count=0
     # Dictionary to store previus computed subproblems
-    memory=dict()
+    # We fill it with 0 and 1 because they're the monst common problems to solve (That's Dynamic Programming)
+    # Without 0 and 1 in the Dict, this is only memorization, not Dynamic programming
+    memory=dict({0:0,1:1,2:1})
     def fibonacci(self,n:int):
         # self.count is just for time meassuring, is not part of the algoritm as sell as n parameter
         self.count+=1

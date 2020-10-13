@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -11,14 +12,14 @@ class Solution:
         ll = res
         # Establece carry a 0, es con lo que vamos a llevar nuestro residuo
         c = 0
-        #Mientras que l1 o l2 no sean 'None' y carry no sea 0 ...
-        #Mientras existan nodos o no haya ningún residuo por sumar, osease que sea 0
+        # Mientras que l1 o l2 no sean 'None' o carry no sea 0 ...
+        # Mientras existan nodos o no haya ningún residuo por sumar, osease que sea 0
         while l1 or l2 or c:
             # Obtiene el valor de l1 y l2, si no existe lo deja en 0
             v1 = l1.val if l1 else 0
             v2 = l2.val if l2 else 0
 
-            # Suma los últimos dígitos de cada ListNode y el carry
+            # Suma todos los valores
             val = v1 + v2 + c
             # Saca el carry (lo que llevamos) dividiendo sin decimales el valor por si es mayor de 10
             c = val//10

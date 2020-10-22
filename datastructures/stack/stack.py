@@ -1,10 +1,13 @@
 #!/usr/bin/python3
+"""
+LIFO
+"""
 class Stack:
     def __init__(self):
         self.stack=[]
     
     def add(self,data):
-        if data is not in self.stack:
+        if data not in self.stack:
             self.stack.append(data)
             return True
         else:

@@ -6,19 +6,19 @@ class Node:
 
 class SLinkedList:
     def __init__(self):
-        self.headval = None
+        self.head = None
 
     def listprint(self):
-        printval = self.headval
+        printval = self.head
         while printval is not None:
             print (printval.data)
             printval = printval.next
-    def AtBegining(self,newdata):
+    def atBegining(self,newdata):
         NewNode = Node(newdata)
-        NewNode.next = self.headval
-        self.headval = NewNode
+        NewNode.next = self.head
+        self.head = NewNode
 
-    def Inbetween(self,middle_node,newdata):
+    def inBetween(self,middle_node,newdata):
         if middle_node is None:
             print("There is no such middle node")
             return
@@ -27,26 +27,26 @@ class SLinkedList:
         NewNode.next = middle_node.next
         middle_node.nextval = NewNode
 
-    def AtEnd(self, newdata):
+    def atEnd(self, newdata):
         NewNode = Node(newdata)
-        if self.headval is None:
-            self.headval = NewNode
+        if self.head is None:
+            self.head = NewNode
             return
-        laste = self.headval
+        laste = self.head
         while(laste.next):
             laste = laste.next
         laste.next=NewNode
 
-    def RemoveNode(self, Removekey):
-        HeadVal = self.headval
+    def removeNode(self, removekey):
+        HeadVal = self.head
         if (HeadVal is not None):
-            if (HeadVal.data == Removekey):
-                self.headval = HeadVal.next
+            if (HeadVal.data == removekey):
+                self.head = HeadVal.next
                 HeadVal = None
                 return
         prev=None
         while (HeadVal is not None):
-            if HeadVal.data == Removekey:
+            if HeadVal.data == removekey:
                 break
             prev = HeadVal
             HeadVal = HeadVal.next
@@ -56,21 +56,21 @@ class SLinkedList:
         HeadVal = None
 
 list = SLinkedList()
-list.headval = Node("Mon")
+list.head = Node("Mon")
 e2 = Node("Wed")
 e3 = Node("Thu")
 
-list.headval.next = e2
+list.head.next = e2
 e2.next = e3
 
-list.AtBegining("Sun")
+list.atBegining("Sun")
 
-list.AtEnd('Fri')
+list.atEnd('Fri')
 
-list.Inbetween(list.headval.next,"Tue")
+list.inBetween(list.head.next,"Tue")
 
-list.Inbetween(list.headval.next,"Chimino")
+list.inBetween(list.head.next,"Chimino")
 
-list.RemoveNode("Chimino")
+list.removeNode("Chimino")
 
 list.listprint()

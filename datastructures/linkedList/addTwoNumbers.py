@@ -5,7 +5,7 @@ class ListNode:
         self.next = next
 
 class Solution:
-    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode):
         # Crea un dummy de ListNode
         res =ListNode
         # Establece el current para el loop con el mismo dummy

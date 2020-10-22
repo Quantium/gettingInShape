@@ -44,6 +44,7 @@ class SLinkedList:
                 self.headval = HeadVal.next
                 HeadVal = None
                 return
+        prev=None
         while (HeadVal is not None):
             if HeadVal.data == Removekey:
                 break

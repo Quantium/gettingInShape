@@ -21,6 +21,22 @@ class TreeNode:
                     self.right=TreeNode(data)
         else:
             self.data=data
+        
+    def find(self,data):
+        if data < self.data:
+            #Search on the left
+            if self.left is None:
+                return None
+            else:
+                return self.left.find(data)
+        elif data > self.data:
+            #Search on the right
+            if self.right is None:
+                return None
+            else:
+                return self.right.find(data)
+        return data
+            
     
     def printTree(self):
         if self.left:
@@ -47,3 +63,6 @@ tree.insert(48)
 tree.insert(71)
 tree.printTree()
 print('--')
+
+print("find 34::",tree.find(34))
+print("find 50::",tree.find(50))

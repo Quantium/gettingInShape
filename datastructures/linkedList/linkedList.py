@@ -25,7 +25,7 @@ class SLinkedList:
 
         NewNode = Node(newdata)
         NewNode.next = middle_node.next
-        middle_node.nextval = NewNode
+        middle_node.next = NewNode
 
     def atEnd(self, newdata):
         NewNode = Node(newdata)

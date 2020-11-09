@@ -13,15 +13,15 @@ graph = {
 visited = [] # List to keep track of visited nodes.
 queue = []     #Initialize a queue (FIFO)
 
-def bfs(visited, graph, node):
-  visited.append(node)
-  queue.append(node)
+def bfs(G, v):
+  visited.append(v)
+  queue.append(v)
 
   while queue:
     s = queue.pop(0) # geting out the _first_ element
     print (s, end = " ") 
 
-    for neighbour in graph[s]:
+    for neighbour in G[s]:
       if neighbour not in visited:
         visited.append(neighbour)
         queue.append(neighbour)

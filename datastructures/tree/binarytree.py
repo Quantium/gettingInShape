@@ -38,12 +38,25 @@ class TreeNode:
         return data
             
     
-    def printTree(self):
-        if self.left:
-            self.left.printTree()
-        print(self.data,sep=" ")
-        if self.right:
-            self.right.printTree()
+    def printTree(self,order='in'):
+        
+        if order=='in':
+            # in-order
+            if self.left: self.left.printTree()
+            print(self.data,sep=" ")
+            if self.right: self.right.printTree()
+
+        elif order=='pre':
+            # pre-order
+            print(self.data,sep=" ")
+            if self.left: self.left.printTree()
+            if self.right: self.right.printTree()
+            
+        elif order=='post':
+            # post-order
+            if self.left: self.left.printTree()
+            if self.right: self.right.printTree()
+            print(self.data,sep=" ")
 
 tree=TreeNode(45)
 tree.printTree()
@@ -51,6 +64,8 @@ print('--')
 
 tree.insert(23)
 tree.printTree()
+print('-')
+tree.printTree(order='pre')
 print('--')
 
 tree.insert(65)

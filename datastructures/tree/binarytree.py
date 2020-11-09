@@ -39,35 +39,28 @@ class TreeNode:
             
     
     def printTree(self,order='in'):
-        
+        res=[]
         if order=='in':
-            # in-order
-            if self.left: self.left.printTree()
+            # in-order transversal
+            if self.left: self.left.printTree(order=order)
             print(self.data,sep=" ")
-            if self.right: self.right.printTree()
+            res.append(self.data)
+            if self.right: self.right.printTree(order=order)
 
         elif order=='pre':
-            # pre-order
+            # pre-order transversal
             print(self.data,sep=" ")
             if self.left: self.left.printTree()
-            if self.right: self.right.printTree()
+            if self.right: self.right.printTree(order=order)
             
         elif order=='post':
-            # post-order
+            # post-order transversal
             if self.left: self.left.printTree()
-            if self.right: self.right.printTree()
+            if self.right: self.right.printTree(order=order)
             print(self.data,sep=" ")
 
 tree=TreeNode(45)
-tree.printTree()
-print('--')
-
 tree.insert(23)
-tree.printTree()
-print('-')
-tree.printTree(order='pre')
-print('--')
-
 tree.insert(65)
 tree.insert(128)
 tree.insert(12)
@@ -77,6 +70,10 @@ tree.insert(6)
 tree.insert(48)
 tree.insert(71)
 tree.printTree()
+print('-')
+tree.printTree(order='post')
+print('-')
+tree.printTree(order='pre')
 print('--')
 
 print("find 34::",tree.find(34))

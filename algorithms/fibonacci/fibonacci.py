@@ -4,6 +4,7 @@ import time
 class Solution:
     # A counter just for time meassuring
     count=0
+    # Recursive function to calculate the correspondent number (n) in the fibonacci sequence
     def fibonacci(self,n:int):
         # self.count is just for time meassuring, is not part of the algoritm as sell as n parameter
         self.count+=1

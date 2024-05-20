@@ -8,7 +8,10 @@ class Solution:
     # Dictionary to store previus computed subproblems
     # We fill it with 0 and 1 because they're the monst common problems to solve (That's Dynamic Programming)
     # Without 0 and 1 in the Dict, this is only memorization, not Dynamic programming
-    memory=dict({0:0,1:1,2:1})
+
+    # I will mark with a 🐓 the end of the memoization related lines
+
+    memory=dict({0:0,1:1,2:1}) #🐓
     def fibonacci(self,n:int):
         # self.count is just for time meassuring, is not part of the algoritm as sell as n parameter
         self.count+=1
@@ -18,18 +21,18 @@ class Solution:
             return 0 
         if n == 1: 
             return 1 
-        # Here we use memorization here, first we check if the computed n is not in the Dictionary already
-        if(self.memory.get(n) == None):
+        # Here we use memoization here, first we check if the computed n is not in the Dictionary already
+        if(self.memory.get(n) == None): #🐓
             result=self.fibonacci(n - 1) + self.fibonacci(n - 2)
             # Once we compute the result of the n subproblem we store it the dictionary
-            self.memory[n]=result
+            self.memory[n]=result #🐓
             # And return the result
             return result
         else:
-            return self.memory.get(n)
+            return self.memory.get(n) #🐓
 
 # Call it from your console!!
-#$ python fibonacciWithMemorization.py 20
+#$ python fibonacciWithMemoization.py 20
 t0= time.time()
 sol = Solution()
 fb = [sol.fibonacci(i) for i in range(int(sys.argv[1]))]
@@ -42,7 +45,7 @@ print("Iterations",sol.count)
 # Commonly the basic one will be the fastest whe u use les than 10 as parameter 
 # But check the Iterations count (Amazing!)
 
-❯ python fibonacciWithMemorization.py 30 && python Helps/fibonacci.py 30
+❯ python fibonacciWithMemoization.py 30 && python fibonacci.py 30
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229]
 Time elapsed:  0.00013780593872070312
 Iterations 86

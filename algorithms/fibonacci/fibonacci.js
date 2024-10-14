@@ -24,6 +24,8 @@ const fibonacci = n => {
 const fib = n => fib(n-1) + fib(n-2);
 */
 
+console.log()
+console.log("Simple Fibonacci")
 // Getting the first console parameter after this file name
 const _n = process.argv[2]
 

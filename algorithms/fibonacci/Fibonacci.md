@@ -28,3 +28,11 @@ Of course you can perform this sum using loops, but memoization, in most of the 
 Memoizaton (Yes, without the R) is a programing technique which consist in _save_ or _memorize_ previously calculated values.
 
 Owing to the huge iterations that the implemented fibonacci recursive algorithm can reach, it ir a very good candidate to use memoization
+
+## Testing
+
+To test the fibonacci's implementations execute the next console command:
+
+````shell
+N=30; py fibonacci.py $N && node fibonacci.js $N && node fibonacciMemoization.js $N && node fibonacciMemoizationClosure.js $N
+````

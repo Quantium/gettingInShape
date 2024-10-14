@@ -34,6 +34,8 @@ class LeonardoBonacci {
     */
 }
 
+console.log()
+console.log("Memoization Fibonacci")
 
 // Getting the first console parameter after this file name
 const _n = process.argv[2]

@@ -4,17 +4,22 @@ let steps = 0
 const move = (a,b)=>{
     //console.log(a,"➡️",b)
 }
-const hanoi = (n,from,to)=>{
+const hanoi = (n,start,target)=>{
     steps++
     if(n===1){
-        return move(from,to)
+        return move(start,target)
     }
-    const third = 6 - (from+to)
+
+    // La suma de los números que representan a las 3 clavijas siempre es 1 + 2 + 3 = 6, 
+    // si conocemos 2 de las claviijas (start y target), podemos encontrar la tercera usando la fórmula:
+    // \text{third} = 6 - (\text{start} + \text{target})
+    const other = 6 - (start+target)
 
     // Recursivo
-    hanoi(n-1,from,third)
-    move(from,to)
-    hanoi(n-1,third,to)
+    hanoi(n-1,start,other) // Hey, guy(s) above me, move from top of me (start) to the peg (other) that is not my target
+    move(start,target) // I will move to my target
+    hanoi(n-1,other,target) // Finally, you move from the peg you are in (other) back on top of me (target)
+
 }
 
 const size = 0 | process.argv[2]

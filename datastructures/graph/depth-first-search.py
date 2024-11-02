@@ -1,14 +1,5 @@
 #!/usr/bin/python3
-
-# This is the graphA.png representation in his dictionary form
-graph = {
-  'A' : ['B','C'],
-  'B' : ['D', 'E'],
-  'C' : ['F'],
-  'D' : [],
-  'E' : ['F'],
-  'F' : []
-}
+from thegraph import graph
 
 visited = set() # Set to keep track of visited nodes.
 
@@ -20,3 +11,4 @@ def dfs(G,v):
         dfs(G,neighbour)
 
 dfs(graph,'A')
+print(visited)

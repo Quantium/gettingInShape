@@ -1,0 +1,35 @@
+# Node.js dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Python dependencies
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs
+logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Build directories
+dist/
+build/
+
+Dockerfile

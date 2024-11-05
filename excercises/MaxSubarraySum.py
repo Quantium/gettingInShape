@@ -2,7 +2,18 @@
 #Given an array of integers, find the maximum sum of a subarray with the lenght k.
 
 def maxSubArray(arr, k):
-   return None #Max sum of subarray given k
+    maxSum = 0
+    windowSum = 0
+    windowStart = 0
+
+    for windowEnd in range(len(arr)):
+        windowSum += arr[windowEnd]
+
+        if windowEnd >= k - 1:
+            maxSum = max(maxSum, windowSum)
+            windowSum -= arr[windowStart]
+            windowStart += 1
+    return maxSum #Max sum of subarray given k
 
 #Test cases
 errors = False

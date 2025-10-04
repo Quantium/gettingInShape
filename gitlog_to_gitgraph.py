@@ -33,20 +33,18 @@ def parse_git_log(log_lines):
 
 def generate_mermaid_code(commits, edges):
     """Generates Mermaid gitGraph code from parsed commits and edges."""
-    mermaid = ["```mermaid", "gitGraph", "  commit id: \"Initial commit\""]
-
-    commit_map = {}
-    count = 1
+    mermaid = ["```mermaid", "gitGraph"]
     
-    for commit, data in commits.items():
-        commit_map[commit] = count
+    # Get commits in chronological order (reverse of git log)
+    commit_list = list(commits.items())
+    commit_list.reverse()  # Reverse to get chronological order
+    
+    for commit, data in commit_list:
         message = data["message"].replace('"', "'")
+        # Truncate very long messages
+        if len(message) > 50:
+            message = message[:47] + "..."
         mermaid.append(f"  commit id: \"{message}\"")
-        count += 1
-
-    for parent, child in edges:
-        if parent in commit_map and child in commit_map:
-            mermaid.append(f"  {commit_map[parent]} --> {commit_map[child]}")
 
     mermaid.append("```")
     return "\n".join(mermaid)

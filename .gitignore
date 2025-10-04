@@ -471,4 +471,46 @@ Temporary Items
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/vscode
+
+# AI-generated files and suggestions
+*.ai
+*.copilot
+.copilot/
+.copilotignore
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Logs and debug files
+*.log
+debug.log
+error.log
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Personal notes and workout files
 workout
+notes.txt
+personal_notes.md

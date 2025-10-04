@@ -18,7 +18,9 @@ A few years ago I practiced Tai-Chi daily, about 3 hours per day. I practiced al
 
 In this repository I practice something I like to call *katas*, which is not something I created, The coding dojo methodology is widely known around the programming community and as with Tai-Chi, I'll do this alone. I'm not interested in competing with anyone, I'm just competing with myself.
 
-When I haven't mastered an excersise, algorithm or datastructure yet, I let only the explanation, I erase the code every time I practiced it to force myself to figure out again how to solve it until it feels natural for me.
+When I haven't mastered an excersise, algorithm or datastructure yet, I let only the explanation, I erase the code every time I practiced it to force myself to figure out again how to solve it until it feels natural for me. Once I return to this repo, generally some months later, if I got the excercise without effort, then I commit the changes to the repo.
+
+Even though Copilot and Cursor ignore all the katas files, I am indeed using ai for some tasks, like documentation, integration (like post-commit) and some configurations, like devcontainers and stuff. It saves me some time, AI coders are like very junior developers who can search on stackoverflow very quickly; my piece of advice: use it just for simply tasks, bolierplates, and build out of the box applications. Don't use it for complex projects. 
 
 About the file organization. I am writing these lines in an attempt to put a little order to this repository, so, if you review the commit history you'll find that the file structure is very messy or nonexistent. But I hope to fix this soon, so in the later versions you'll find more order.
 
@@ -76,6 +78,8 @@ gitGraph
   commit id: "test: Final test of post-commit hook - removing..."
   commit id: "Adding a post-commit command to generate the me..."
   commit id: "Trying again to fix the mermaid code and its au..."
+  commit id: "README.md result from post commit script"
+```
 ```
 ```
 ```

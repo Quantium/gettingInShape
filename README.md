@@ -70,15 +70,12 @@ gitGraph
   commit id: "Taking out the graph and cleaning up a little bit"
   commit id: "t(docker): Containerizing and uploading to Dock..."
   commit id: "t(Window Algorithm): The window algorithm expla..."
-  commit id: "vcontainers adn gitgraph generation in the READ..."
-  commit id: "ixing gitgraph"
-  commit id: "Fixing some gramar errors in the README.md"
-  commit id: "test: Testing post-commit hook for Mermaid gitG..."
-  commit id: "test: Testing updated post-commit hook"
-  commit id: "test: Final test of post-commit hook - removing..."
-  commit id: "Adding a post-commit command to generate the me..."
-  commit id: "Trying again to fix the mermaid code and its au..."
+  commit id: "Merge pull request #6 from Quantium/dependabot/..."
+  commit id: "Merge pull request #7 from Quantium/dependabot/..."
+  commit id: "Create dependabot.yml"
   commit id: "README.md result from post commit script"
+  commit id: "Adding some red tape"
+```
 ```
 ```
 ```

@@ -25,6 +25,7 @@ About the file organization. I am writing these lines in an attempt to put a lit
 A.
 
 ```mermaid
+```mermaid
 gitGraph
   commit id: "First commit"
   commit id: "More excercises and Helpers (Using VS Code to d..."
@@ -74,6 +75,8 @@ gitGraph
   commit id: "test: Testing updated post-commit hook"
   commit id: "test: Final test of post-commit hook - removing..."
   commit id: "Adding a post-commit command to generate the me..."
+  commit id: "Trying again to fix the mermaid code and its au..."
+```
 ```
 ```
 ```

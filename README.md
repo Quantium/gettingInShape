@@ -75,6 +75,11 @@ gitGraph
   commit id: "Create dependabot.yml"
   commit id: "README.md result from post commit script"
   commit id: "Adding some red tape"
+  commit id: "Some documentation"
+  commit id: "README.md result from post commit script"
+  commit id: "Adding some red tape"
+  commit id: "Some documentation"
+```
 ```
 ```
 ```

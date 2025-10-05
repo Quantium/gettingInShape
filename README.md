@@ -79,4 +79,5 @@ gitGraph
   commit id: "README"
   commit id: "Testing post-commit script"
   commit id: "Adding the git hooks to the repo. Don't forget ..."
+  commit id: "vcontainer typescript functionality"
 ```

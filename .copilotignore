@@ -20,3 +20,4 @@ Helps/
 !.cursorignore
 !.copilotignore
 !.git/
+!git-hooks

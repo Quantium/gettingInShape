@@ -19,10 +19,5 @@ Helps/
 !.vscode/
 !.cursorignore
 !.copilotignore
-!.git/hooks/
-!.git/hooks/post-commit
-!.git/hooks/pre-commit
-!.git/hooks/pre-push
-!.git/hooks/pre-rebase
-!.git/hooks/pre-receive
-!.git/hooks/pre-receive
+!.git/
+!git-hooks

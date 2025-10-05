@@ -19,6 +19,7 @@
     "ms-vscode.vscode-git-graph",
     "eamodio.gitlens",
     "ms-vscode.vscode-github-pullrequest",
-    "ms-vscode.vscode-github-issue-notebooks"
+    "ms-vscode.vscode-github-issue-notebooks",
+    "ms-vscode.vscode-typescript-next"
   ]
 }

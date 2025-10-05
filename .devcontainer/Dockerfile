@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir --upgrade pip \
         ipykernel
 
 # Install essential Node.js tools
-RUN npm install -g typescript ts-node
+RUN npm install -g typescript ts-node @types/node tsx tsconfig-paths
 
 # Set environment variables
 ENV PYTHONPATH=/usr/src/app

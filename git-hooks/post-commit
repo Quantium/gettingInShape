@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Post-commit hook to automatically update the Mermaid gitGraph in README.md
+# This script runs after every commit to regenerate the git history visualization
+
+echo "Updating Mermaid gitGraph in README.md..."
+
+# Run the gitlog_to_gitgraph.py script and capture output
+python3 .git/hooks/gitlog_to_gitgraph.py > /tmp/mermaid_output.txt
+
+# Check if the script ran successfully (Exit code equals 0)
+if [ $? -eq 0 ]; then
+    # Create a temporary file with the updated README content
+    # Find the start and end of the mermaid block in README.md
+    awk '
+    /^```mermaid$/ { 
+        if (!in_mermaid) {
+            print; 
+            in_mermaid = 1; 
+            # Insert the new mermaid content
+            while ((getline line < "/tmp/mermaid_output.txt") > 0) {
+                print line
+            }
+            close("/tmp/mermaid_output.txt")
+        }
+        next 
+    }
+    in_mermaid && /^```$/ { 
+        print; 
+        in_mermaid = 0; 
+        next 
+    }
+    !in_mermaid { 
+        print 
+    }
+    ' README.md > /tmp/updated_readme.md
+    
+    # Replace the original README.md with the updated version
+    mv /tmp/updated_readme.md README.md
+    
+    echo "✅ Mermaid gitGraph updated successfully!"
+    echo "📊 Commit history visualization has been refreshed."
+else
+    echo "❌ Failed to generate Mermaid gitGraph"
+    exit 1
+fi
+
+# Clean up temporary files
+rm -f /tmp/mermaid_output.txt
+
+echo "🎉 Post-commit hook completed!"

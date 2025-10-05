@@ -25,7 +25,7 @@ Even though Copilot and Cursor ignore all the katas files, I am indeed using ai 
 
 About the file organization. I am writing these lines in an attempt to put a little order to this repository, so, if you review the commit history you'll find that the file structure is very messy or nonexistent. But I hope to fix this soon, so in the later versions you'll find more order.
 
-Also, I am using a post-commit script (inside .git/hooks folder) wich add this mermaid code to show the gitgraph, just for fun.
+Also, I am using a post-commit script (inside .git/hooks folder) wich add this mermaid code to show the gitgraph, just for fun. Just copy the git-hooks folder content to .git/hooks.
 
 ```mermaid
 gitGraph
@@ -77,4 +77,5 @@ gitGraph
   commit id: "Adding some red tape"
   commit id: "README"
   commit id: "README"
+  commit id: "Testing post-commit script"
 ```

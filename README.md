@@ -22,8 +22,11 @@ When I haven't mastered an excersise, algorithm or datastructure yet, I let only
 
 Even though Copilot and Cursor ignore all the katas files, I am indeed using ai for some tasks, like documentation, integration (like post-commit) and some configurations, like devcontainers and stuff. It saves me some time, AI coders are like very junior developers who can search on stackoverflow very quickly; my piece of advice: use it just for simply tasks, bolierplates, and build out of the box applications. Don't use it for complex projects. 
 
-
 About the file organization. I am writing these lines in an attempt to put a little order to this repository, so, if you review the commit history you'll find that the file structure is very messy or nonexistent. But I hope to fix this soon, so in the later versions you'll find more order.
+
+Some excersices are documented, you will find a md file inside some folders:
+- [Hanoi Towers](algorithms/divideAndConquer/Hanoi.md)
+- [Fibonacci](algorithms/fibonacci/Fibonacci.md)
 
 Also, I am using a post-commit script (inside .git/hooks folder) wich add this mermaid code to show the gitgraph, just for fun. Just copy the git-hooks folder content to .git/hooks.
 
@@ -80,4 +83,5 @@ gitGraph
   commit id: "Testing post-commit script"
   commit id: "Adding the git hooks to the repo. Don't forget ..."
   commit id: "vcontainer typescript functionality"
+  commit id: "Adding draw functionality to hanoi towers in ja..."
 ```
